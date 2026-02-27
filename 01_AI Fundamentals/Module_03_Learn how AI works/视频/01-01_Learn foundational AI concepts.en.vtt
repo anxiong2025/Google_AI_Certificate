@@ -1,0 +1,579 @@
+WEBVTT
+
+1
+00:00:00.840 --> 00:00:03.930
+- I remember one time coming
+out of a complex meeting
+
+2
+00:00:03.930 --> 00:00:06.720
+that had a lot of action
+items that I needed to capture
+
+3
+00:00:06.720 --> 00:00:09.210
+and put into an email for the team.
+
+4
+00:00:09.210 --> 00:00:10.650
+I was dreading it.
+
+5
+00:00:10.650 --> 00:00:12.750
+And then I thought I should use AI
+
+6
+00:00:12.750 --> 00:00:14.610
+for a first draft.
+
+7
+00:00:14.610 --> 00:00:15.480
+It was great.
+
+8
+00:00:15.480 --> 00:00:17.910
+I didn't have to worry about
+capturing the action items.
+
+9
+00:00:17.910 --> 00:00:19.680
+I didn't have to worry
+about the formatting,
+
+10
+00:00:19.680 --> 00:00:21.660
+and once I put my own touches
+
+11
+00:00:21.660 --> 00:00:24.390
+and reviewed carefully
+what AI had created,
+
+12
+00:00:24.390 --> 00:00:27.510
+I sent off the email, and
+it saved me a lot of time.
+
+13
+00:00:27.510 --> 00:00:30.300
+AI can sometimes feel like magic.
+
+14
+00:00:30.300 --> 00:00:34.020
+It is so much power to do
+amazing things in seconds.
+
+15
+00:00:34.020 --> 00:00:36.690
+When I get an impressive AI
+result, I'm almost expecting
+
+16
+00:00:36.690 --> 00:00:38.550
+to hear applause in the background,
+
+17
+00:00:38.550 --> 00:00:40.470
+but of course, AI isn't magic.
+
+18
+00:00:40.470 --> 00:00:43.200
+It's a computer program that,
+like others, has capabilities
+
+19
+00:00:43.200 --> 00:00:44.580
+and limitations.
+
+20
+00:00:44.580 --> 00:00:47.250
+Understanding how AI
+works can help you get
+
+21
+00:00:47.250 --> 00:00:48.213
+the most out of it.
+
+22
+00:00:49.050 --> 00:00:51.000
+I'm gonna walk you through
+the top things you need
+
+23
+00:00:51.000 --> 00:00:53.280
+to know about AI, and don't worry,
+
+24
+00:00:53.280 --> 00:00:55.680
+I'll do without all the tech jargon.
+
+25
+00:00:55.680 --> 00:00:56.910
+First things first.
+
+26
+00:00:56.910 --> 00:00:58.620
+Let's get on the same page.
+
+27
+00:00:58.620 --> 00:00:59.820
+When we say AI,
+
+28
+00:00:59.820 --> 00:01:02.940
+what are we really talking
+about beyond the buzzword?
+
+29
+00:01:02.940 --> 00:01:05.490
+You probably already know that AI stands
+
+30
+00:01:05.490 --> 00:01:08.250
+for artificial intelligence.
+
+31
+00:01:08.250 --> 00:01:10.110
+Artificial intelligence is the concept
+
+32
+00:01:10.110 --> 00:01:11.940
+of building intelligent machines
+
+33
+00:01:11.940 --> 00:01:14.160
+that can do things like
+reasoning through a problem
+
+34
+00:01:14.160 --> 00:01:16.410
+and providing recommendations.
+
+35
+00:01:16.410 --> 00:01:18.180
+But how does it do that?
+
+36
+00:01:18.180 --> 00:01:20.340
+Well, within the world of AI,
+
+37
+00:01:20.340 --> 00:01:22.980
+you have something called models.
+
+38
+00:01:22.980 --> 00:01:25.740
+AI models are computer programs
+that are trained on tons
+
+39
+00:01:25.740 --> 00:01:28.710
+of data, like articles, images, or videos.
+
+40
+00:01:28.710 --> 00:01:30.840
+The model finds patterns in the data,
+
+41
+00:01:30.840 --> 00:01:33.270
+and then is able to apply those patterns
+
+42
+00:01:33.270 --> 00:01:35.880
+to new situations like making predictions
+
+43
+00:01:35.880 --> 00:01:37.740
+or generating new content.
+
+44
+00:01:37.740 --> 00:01:39.600
+This process, called training,
+
+45
+00:01:39.600 --> 00:01:41.643
+helps the model improve over time,
+
+46
+00:01:42.540 --> 00:01:45.630
+and this isn't some futuristic technology.
+
+47
+00:01:45.630 --> 00:01:47.700
+Think of your email spam filter.
+
+48
+00:01:47.700 --> 00:01:49.440
+It uses massive amounts of data
+
+49
+00:01:49.440 --> 00:01:50.790
+to help sort emails you want
+
+50
+00:01:50.790 --> 00:01:53.970
+from the emails you don't
+want, you know, spam.
+
+51
+00:01:53.970 --> 00:01:56.010
+Every time you mark something as spam,
+
+52
+00:01:56.010 --> 00:01:59.100
+it learns from that and gets
+better and better over time.
+
+53
+00:01:59.100 --> 00:02:01.800
+But what happens when your
+spam filter gets it wrong
+
+54
+00:02:01.800 --> 00:02:04.320
+and an important email gets lost?
+
+55
+00:02:04.320 --> 00:02:07.413
+The answer may lie in the
+model's training data.
+
+56
+00:02:08.370 --> 00:02:11.370
+This is the data that AI learns from.
+
+57
+00:02:11.370 --> 00:02:13.410
+Let's look at another example.
+
+58
+00:02:13.410 --> 00:02:15.810
+Say, a food distributor trains an AI model
+
+59
+00:02:15.810 --> 00:02:17.523
+to sort apples from other fruit.
+
+60
+00:02:18.390 --> 00:02:21.540
+This model's training data
+includes thousands of images
+
+61
+00:02:21.540 --> 00:02:25.650
+of apples, enabling the model
+to recognize, well, apples.
+
+62
+00:02:25.650 --> 00:02:27.360
+But what happens if the training data
+
+63
+00:02:27.360 --> 00:02:30.540
+only included images of red apples?
+
+64
+00:02:30.540 --> 00:02:33.330
+This might make the model
+less accurate at identifying
+
+65
+00:02:33.330 --> 00:02:36.330
+other types of apples,
+like green or yellow.
+
+66
+00:02:36.330 --> 00:02:38.100
+As a result, the food distributor
+
+67
+00:02:38.100 --> 00:02:39.870
+might end up sorting apples incorrectly,
+
+68
+00:02:39.870 --> 00:02:41.130
+causing them to lose money
+
+69
+00:02:41.130 --> 00:02:43.530
+and waste perfectly good apples.
+
+70
+00:02:43.530 --> 00:02:46.350
+A model's training data
+shapes what it does.
+
+71
+00:02:46.350 --> 00:02:49.140
+It's also one reason why
+one model may produce
+
+72
+00:02:49.140 --> 00:02:50.940
+different results from another.
+
+73
+00:02:50.940 --> 00:02:53.610
+A second reason is the
+model architecture itself.
+
+74
+00:02:53.610 --> 00:02:54.900
+How a model is programmed
+
+75
+00:02:54.900 --> 00:02:56.520
+and the rules it applies to its data
+
+76
+00:02:56.520 --> 00:02:59.100
+and learning may vary from model to model.
+
+77
+00:02:59.100 --> 00:03:02.550
+Some AI models, like Gemini,
+learn from massive amounts
+
+78
+00:03:02.550 --> 00:03:05.940
+of data that go way beyond
+images of fruit alone.
+
+79
+00:03:05.940 --> 00:03:07.590
+With more data and training,
+
+80
+00:03:07.590 --> 00:03:10.500
+a model can start doing
+some pretty amazing things.
+
+81
+00:03:10.500 --> 00:03:11.820
+It can understand a request
+
+82
+00:03:11.820 --> 00:03:13.110
+and respond to it,
+
+83
+00:03:13.110 --> 00:03:15.000
+even if it's the first
+time it's encountering
+
+84
+00:03:15.000 --> 00:03:16.233
+that type of request.
+
+85
+00:03:17.100 --> 00:03:21.660
+This advanced type of model is
+called a large language model
+
+86
+00:03:21.660 --> 00:03:23.730
+or an LLM for short.
+
+87
+00:03:23.730 --> 00:03:25.260
+LLMs can learn so much
+
+88
+00:03:25.260 --> 00:03:27.420
+and get so good at
+predicting based on patterns
+
+89
+00:03:27.420 --> 00:03:29.670
+that they can create entirely new content
+
+90
+00:03:29.670 --> 00:03:32.970
+like blog posts or birthday haiku.
+
+91
+00:03:32.970 --> 00:03:36.780
+AI's ability to create something
+new is called Generative AI
+
+92
+00:03:36.780 --> 00:03:38.343
+or GenAI for short.
+
+93
+00:03:39.240 --> 00:03:41.010
+It gets even more amazing.
+
+94
+00:03:41.010 --> 00:03:44.370
+Some GenAI assistants are multimodal,
+
+95
+00:03:44.370 --> 00:03:46.740
+which is just a fancy way
+of saying they can work
+
+96
+00:03:46.740 --> 00:03:48.300
+with more than just text.
+
+97
+00:03:48.300 --> 00:03:51.330
+They can understand and
+create images, videos,
+
+98
+00:03:51.330 --> 00:03:53.130
+audio, and more.
+
+99
+00:03:53.130 --> 00:03:55.590
+So you could upload a photo of a chart
+
+100
+00:03:55.590 --> 00:03:57.420
+and ask for a text summary of it
+
+101
+00:03:57.420 --> 00:04:00.150
+or submit an audio recording of a meeting
+
+102
+00:04:00.150 --> 00:04:02.700
+and have it turned into
+a list of action items.
+
+103
+00:04:02.700 --> 00:04:05.400
+Or you could easily
+create compelling visuals
+
+104
+00:04:05.400 --> 00:04:07.770
+for your website or client presentation.
+
+105
+00:04:07.770 --> 00:04:10.500
+Let's look at another way AI is evolving.
+
+106
+00:04:10.500 --> 00:04:14.280
+You may have heard about AI Agents.
+
+107
+00:04:14.280 --> 00:04:16.050
+What's that all about?
+
+108
+00:04:16.050 --> 00:04:18.240
+Well, think of agents as systems
+
+109
+00:04:18.240 --> 00:04:21.180
+that combine the intelligence
+of advanced AI models
+
+110
+00:04:21.180 --> 00:04:24.360
+with access to tools like
+your calendar or email.
+
+111
+00:04:24.360 --> 00:04:27.060
+Instead of giving an agent a single task,
+
+112
+00:04:27.060 --> 00:04:28.710
+you can give it a broader goal.
+
+113
+00:04:28.710 --> 00:04:31.440
+Then the agent can break that
+goal down into smaller steps
+
+114
+00:04:31.440 --> 00:04:34.890
+and take action on your
+behalf, all under your control.
+
+115
+00:04:34.890 --> 00:04:37.477
+For example, imagine telling an AI agent,
+
+116
+00:04:37.477 --> 00:04:40.470
+"Organize a kickoff meeting
+for the Q3 marketing project
+
+117
+00:04:40.470 --> 00:04:43.830
+with the design and sales
+teams for next week."
+
+118
+00:04:43.830 --> 00:04:46.740
+An AI agent could then
+check everyone's calendars
+
+119
+00:04:46.740 --> 00:04:48.030
+for a free slot,
+
+120
+00:04:48.030 --> 00:04:50.220
+book a meeting room, draft a welcome email
+
+121
+00:04:50.220 --> 00:04:51.660
+with the project brief attached,
+
+122
+00:04:51.660 --> 00:04:53.643
+and send out the calendar invitation.
+
+123
+00:04:54.570 --> 00:04:57.450
+It can handle all the tedious
+coordination, freeing the team
+
+124
+00:04:57.450 --> 00:05:00.360
+to focus on the actual
+strategy for the meeting.
+
+125
+00:05:00.360 --> 00:05:02.970
+The opportunity there is not
+just answering your questions,
+
+126
+00:05:02.970 --> 00:05:06.210
+but actively helping you
+to accomplish your goals.
+
+127
+00:05:06.210 --> 00:05:09.420
+Okay, great, we've talked
+about what AI is, how it works,
+
+128
+00:05:09.420 --> 00:05:11.340
+and some emerging capabilities.
+
+129
+00:05:11.340 --> 00:05:13.890
+This is crucial for you
+to be an informed user.
+
+130
+00:05:13.890 --> 00:05:15.030
+It allows you to make the most
+
+131
+00:05:15.030 --> 00:05:18.480
+of AI's possibilities while
+understanding its limitations.
+
+132
+00:05:18.480 --> 00:05:19.563
+Let's keep going.

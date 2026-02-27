@@ -1,0 +1,454 @@
+WEBVTT
+
+1
+00:00:00.630 --> 00:00:03.120
+- Think about a project
+you're working on right now.
+
+2
+00:00:03.120 --> 00:00:04.470
+Ever felt like you've gone through
+
+3
+00:00:04.470 --> 00:00:07.230
+the exact same motions before?
+
+4
+00:00:07.230 --> 00:00:09.300
+I'm here to show you another way.
+
+5
+00:00:09.300 --> 00:00:11.100
+And this method will not just help you
+
+6
+00:00:11.100 --> 00:00:12.600
+with your current project,
+
+7
+00:00:12.600 --> 00:00:15.390
+but it will also set you
+up with a custom AI tool
+
+8
+00:00:15.390 --> 00:00:18.660
+that you can go back
+to time and time again.
+
+9
+00:00:18.660 --> 00:00:20.910
+Sounds cool but also complicated?
+
+10
+00:00:20.910 --> 00:00:21.743
+It's not.
+
+11
+00:00:21.743 --> 00:00:22.590
+I'm Ammaar.
+
+12
+00:00:22.590 --> 00:00:25.680
+I lead Product & Design
+on Google AI Studio,
+
+13
+00:00:25.680 --> 00:00:27.360
+the platform where you can work
+
+14
+00:00:27.360 --> 00:00:28.830
+with the latest Google models
+
+15
+00:00:28.830 --> 00:00:30.720
+and build your ideas.
+
+16
+00:00:30.720 --> 00:00:33.000
+And AI has been a game changer
+
+17
+00:00:33.000 --> 00:00:35.280
+for bringing my ideas to life.
+
+18
+00:00:35.280 --> 00:00:38.430
+From books, animated shorts, coding games,
+
+19
+00:00:38.430 --> 00:00:41.460
+podcasts with people
+from the past, and more,
+
+20
+00:00:41.460 --> 00:00:44.340
+AI has unleashed my creativity.
+
+21
+00:00:44.340 --> 00:00:45.690
+Throughout your learning journey,
+
+22
+00:00:45.690 --> 00:00:49.230
+you've been collaborating with
+AI to amplify your skills.
+
+23
+00:00:49.230 --> 00:00:51.870
+You can work with AI to brainstorm ideas,
+
+24
+00:00:51.870 --> 00:00:53.670
+draft tailored communications,
+
+25
+00:00:53.670 --> 00:00:56.220
+or get a first pass on a status report.
+
+26
+00:00:56.220 --> 00:00:58.260
+You're having a conversation with AI
+
+27
+00:00:58.260 --> 00:01:00.510
+to solve the challenge
+right in front of you.
+
+28
+00:01:01.350 --> 00:01:04.500
+Now, let's zoom out and
+make even bigger strides.
+
+29
+00:01:04.500 --> 00:01:06.030
+Across all of your work,
+
+30
+00:01:06.030 --> 00:01:08.250
+what are the challenges
+you are encountering
+
+31
+00:01:08.250 --> 00:01:10.260
+time and time again?
+
+32
+00:01:10.260 --> 00:01:11.227
+You might think to yourself,
+
+33
+00:01:11.227 --> 00:01:13.710
+"I wish there was an app for this."
+
+34
+00:01:13.710 --> 00:01:14.910
+Well, in this course,
+
+35
+00:01:14.910 --> 00:01:16.770
+you're going to learn how to build it
+
+36
+00:01:16.770 --> 00:01:20.160
+so that the next time you come
+up against that challenge,
+
+37
+00:01:20.160 --> 00:01:22.830
+you have a way to solve it fast.
+
+38
+00:01:22.830 --> 00:01:26.070
+You're going to learn to
+create custom shareable apps
+
+39
+00:01:26.070 --> 00:01:30.570
+using AI that are designed by you for you.
+
+40
+00:01:30.570 --> 00:01:33.630
+And this is the next
+step in your AI journey,
+
+41
+00:01:33.630 --> 00:01:35.700
+moving from being a user of AI
+
+42
+00:01:35.700 --> 00:01:39.810
+to becoming a builder of your
+own AI-powered solutions.
+
+43
+00:01:39.810 --> 00:01:41.640
+To do so, I'm going to introduce you
+
+44
+00:01:41.640 --> 00:01:44.310
+to something called vibe coding.
+
+45
+00:01:44.310 --> 00:01:46.470
+It's a way you can use natural language
+
+46
+00:01:46.470 --> 00:01:49.260
+to build software or apps with AI.
+
+47
+00:01:49.260 --> 00:01:51.330
+You can then use that app
+
+48
+00:01:51.330 --> 00:01:54.030
+to make it easier to get stuff done.
+
+49
+00:01:54.030 --> 00:01:57.480
+For example, let's say you
+have this kind of annoying task
+
+50
+00:01:57.480 --> 00:01:58.770
+you always have to do,
+
+51
+00:01:58.770 --> 00:02:01.770
+like resizing images for
+your monthly newsletter.
+
+52
+00:02:01.770 --> 00:02:04.260
+You wish you had an app
+with a big Upload button
+
+53
+00:02:04.260 --> 00:02:06.150
+that you could drop the images into
+
+54
+00:02:06.150 --> 00:02:10.350
+and instantly get them back in
+the size and format you need.
+
+55
+00:02:10.350 --> 00:02:11.730
+You'd also love for that app
+
+56
+00:02:11.730 --> 00:02:13.800
+to automatically rename the image files
+
+57
+00:02:13.800 --> 00:02:17.430
+so that it follows your
+team's naming conventions.
+
+58
+00:02:17.430 --> 00:02:18.360
+Well, with vibe coding,
+
+59
+00:02:18.360 --> 00:02:21.090
+you can build an app to
+do all of those things
+
+60
+00:02:21.090 --> 00:02:22.710
+just the way you need it.
+
+61
+00:02:22.710 --> 00:02:24.570
+Vibe coding is a lot like prompting,
+
+62
+00:02:24.570 --> 00:02:27.480
+it requires you to describe
+exactly what you need,
+
+63
+00:02:27.480 --> 00:02:29.550
+give AI details about your workflow,
+
+64
+00:02:29.550 --> 00:02:32.820
+and help it understand
+good results from bad ones.
+
+65
+00:02:32.820 --> 00:02:35.850
+It can then attempt to
+create your dream app.
+
+66
+00:02:35.850 --> 00:02:38.010
+But how is this even possible?
+
+67
+00:02:38.010 --> 00:02:39.270
+Well, when you vibe code,
+
+68
+00:02:39.270 --> 00:02:42.360
+you're actually using
+something called agentic AI,
+
+69
+00:02:42.360 --> 00:02:43.350
+and this type of AI
+
+70
+00:02:43.350 --> 00:02:46.170
+goes beyond just
+responding to your prompts.
+
+71
+00:02:46.170 --> 00:02:48.750
+It takes action on your behalf,
+
+72
+00:02:48.750 --> 00:02:51.720
+but only under your
+supervision, of course.
+
+73
+00:02:51.720 --> 00:02:53.310
+After you describe what you need
+
+74
+00:02:53.310 --> 00:02:55.560
+using normal, non-technical words,
+
+75
+00:02:55.560 --> 00:02:57.990
+agentic AI handles all the techy stuff
+
+76
+00:02:57.990 --> 00:02:59.070
+like writing code,
+
+77
+00:02:59.070 --> 00:03:00.150
+building the interface,
+
+78
+00:03:00.150 --> 00:03:02.760
+and making sure everything works together.
+
+79
+00:03:02.760 --> 00:03:03.660
+And in this course,
+
+80
+00:03:03.660 --> 00:03:04.800
+you'll learn how to vibe code
+
+81
+00:03:04.800 --> 00:03:07.890
+to tackle some of the
+challenges you face at work.
+
+82
+00:03:07.890 --> 00:03:09.930
+First, you'll map out
+your personal workflow
+
+83
+00:03:09.930 --> 00:03:12.630
+and pinpoint exactly where a custom app
+
+84
+00:03:12.630 --> 00:03:15.060
+would help you save the most time.
+
+85
+00:03:15.060 --> 00:03:17.340
+Next, you'll see vibe coding in action.
+
+86
+00:03:17.340 --> 00:03:18.810
+I'll walk you through different examples
+
+87
+00:03:18.810 --> 00:03:21.720
+so you can see how it
+works from start to finish.
+
+88
+00:03:21.720 --> 00:03:23.700
+Finally, you'll build your own app.
+
+89
+00:03:23.700 --> 00:03:25.230
+I'll guide you step by step
+
+90
+00:03:25.230 --> 00:03:27.690
+and make sure you know how
+to vibe code responsibly
+
+91
+00:03:27.690 --> 00:03:30.300
+and troubleshoot common issues.
+
+92
+00:03:30.300 --> 00:03:33.210
+You'll find out how to
+evaluate the code AI developed,
+
+93
+00:03:33.210 --> 00:03:34.140
+own the results,
+
+94
+00:03:34.140 --> 00:03:36.630
+and maintain your app over time.
+
+95
+00:03:36.630 --> 00:03:38.010
+All of this will help make sure
+
+96
+00:03:38.010 --> 00:03:40.950
+you create an app that actually works.
+
+97
+00:03:40.950 --> 00:03:42.300
+And by the end of the course,
+
+98
+00:03:42.300 --> 00:03:44.820
+you'll have a method
+you can repeatedly use
+
+99
+00:03:44.820 --> 00:03:49.110
+to identify ways Gemini,
+Google AI Studio and NotebookLM
+
+100
+00:03:49.110 --> 00:03:51.060
+can help you in your job,
+
+101
+00:03:51.060 --> 00:03:53.520
+and you'll have the skills
+and confidence you need
+
+102
+00:03:53.520 --> 00:03:54.990
+to create a custom app
+
+103
+00:03:54.990 --> 00:03:57.930
+that can handle some of your larger tasks.
+
+104
+00:03:57.930 --> 00:03:59.790
+If you're ready to start building,
+
+105
+00:03:59.790 --> 00:04:00.623
+let's jump in.

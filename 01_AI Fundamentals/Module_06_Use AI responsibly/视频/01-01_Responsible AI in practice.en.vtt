@@ -1,0 +1,518 @@
+WEBVTT
+
+1
+00:00:00.480 --> 00:00:03.810
+- Imagine your boss says
+to you, "We need to talk."
+
+2
+00:00:03.810 --> 00:00:05.340
+A little worrying, right?
+
+3
+00:00:05.340 --> 00:00:09.390
+Now, imagine a coworker
+says, "We need to talk."
+
+4
+00:00:09.390 --> 00:00:12.390
+Same words, different reaction.
+
+5
+00:00:12.390 --> 00:00:14.580
+You can sense the difference
+between those situations
+
+6
+00:00:14.580 --> 00:00:18.450
+because you understand nuance,
+context and consequences
+
+7
+00:00:18.450 --> 00:00:20.790
+but AI can't understand those things,
+
+8
+00:00:20.790 --> 00:00:22.650
+not on its own at least.
+
+9
+00:00:22.650 --> 00:00:24.510
+It can be an amazing collaborator
+
+10
+00:00:24.510 --> 00:00:27.570
+and help you enhance your
+work in all sorts of ways
+
+11
+00:00:27.570 --> 00:00:30.660
+but AI doesn't live in
+the real world like we do.
+
+12
+00:00:30.660 --> 00:00:34.830
+That means you need to
+exercise responsible AI use.
+
+13
+00:00:34.830 --> 00:00:37.620
+This is a big part of
+our work here at Google.
+
+14
+00:00:37.620 --> 00:00:40.410
+We're committed to AI that
+encourages bold innovation,
+
+15
+00:00:40.410 --> 00:00:43.860
+responsible development
+and collaborative progress.
+
+16
+00:00:43.860 --> 00:00:46.530
+These are AI principles.
+
+17
+00:00:46.530 --> 00:00:48.990
+So knowing AI's limitations
+
+18
+00:00:48.990 --> 00:00:52.110
+enables you to use it more
+effectively and responsibly.
+
+19
+00:00:52.110 --> 00:00:54.960
+For example, AI can get things wrong
+
+20
+00:00:54.960 --> 00:00:58.260
+and say things that aren't
+true or suddenly false.
+
+21
+00:00:58.260 --> 00:01:00.570
+This is called hallucination.
+
+22
+00:01:00.570 --> 00:01:04.260
+There are many reasons
+why AI may hallucinate.
+
+23
+00:01:04.260 --> 00:01:07.500
+For one, it may be that its
+underlying training data
+
+24
+00:01:07.500 --> 00:01:09.060
+has an error.
+
+25
+00:01:09.060 --> 00:01:10.860
+It could also be that it's
+trying to solve a problem
+
+26
+00:01:10.860 --> 00:01:14.760
+that's entirely too unique and
+that it hasn't seen before.
+
+27
+00:01:14.760 --> 00:01:16.800
+Might also struggle to
+accurately understand
+
+28
+00:01:16.800 --> 00:01:19.800
+real world knowledge and physical things
+
+29
+00:01:19.800 --> 00:01:22.650
+or it might be because it's
+trying to create an answer
+
+30
+00:01:22.650 --> 00:01:24.390
+but it's really just a guess.
+
+31
+00:01:24.390 --> 00:01:26.160
+Because AI can hallucinate,
+
+32
+00:01:26.160 --> 00:01:29.100
+you always need to pay attention
+and verify what you get
+
+33
+00:01:29.100 --> 00:01:30.720
+before using it in your work,
+
+34
+00:01:30.720 --> 00:01:32.940
+even if the responses sound confident.
+
+35
+00:01:32.940 --> 00:01:34.770
+Another limitation you should be aware of
+
+36
+00:01:34.770 --> 00:01:38.610
+is that AI does not have
+common sense like you and me.
+
+37
+00:01:38.610 --> 00:01:42.000
+And while its outputs can
+seem insightful or intuitive,
+
+38
+00:01:42.000 --> 00:01:43.080
+you have to remember
+
+39
+00:01:43.080 --> 00:01:46.380
+that it doesn't have a real
+understanding of the world.
+
+40
+00:01:46.380 --> 00:01:47.213
+At the end of the day,
+
+41
+00:01:47.213 --> 00:01:49.620
+its outputs are just based on
+patterns it learned from data,
+
+42
+00:01:49.620 --> 00:01:51.360
+not real experience.
+
+43
+00:01:51.360 --> 00:01:53.910
+For instance, recently, I
+asked it about street festivals
+
+44
+00:01:53.910 --> 00:01:55.830
+in an upcoming weekend.
+
+45
+00:01:55.830 --> 00:01:58.560
+It pulled street festivals
+from previous years.
+
+46
+00:01:58.560 --> 00:02:02.010
+It was a mistake but I
+caught it and corrected it.
+
+47
+00:02:02.010 --> 00:02:04.680
+So what part do you play as an AI user?
+
+48
+00:02:04.680 --> 00:02:06.810
+Well, you're in the driver's seat.
+
+49
+00:02:06.810 --> 00:02:09.540
+You're responsible for overseeing
+each step of the process
+
+50
+00:02:09.540 --> 00:02:11.490
+from beginning to end.
+
+51
+00:02:11.490 --> 00:02:13.710
+We call this human-in-the-loop
+
+52
+00:02:13.710 --> 00:02:15.660
+meaning you should be constantly involved
+
+53
+00:02:15.660 --> 00:02:17.940
+with the use of AI at each step.
+
+54
+00:02:17.940 --> 00:02:20.790
+Now, the need to use AI
+responsibly is pretty obvious
+
+55
+00:02:20.790 --> 00:02:22.417
+but you may be thinking to yourself,
+
+56
+00:02:22.417 --> 00:02:24.810
+"How do I do this," or "Where do I start?"
+
+57
+00:02:24.810 --> 00:02:26.520
+Well, there are three simple steps
+
+58
+00:02:26.520 --> 00:02:29.610
+to making sure you're
+using AI responsibly.
+
+59
+00:02:29.610 --> 00:02:31.920
+To remember it, we like
+to use the term ACT
+
+60
+00:02:31.920 --> 00:02:34.200
+for ACT responsibly.
+
+61
+00:02:34.200 --> 00:02:36.810
+A stands for ask.
+
+62
+00:02:36.810 --> 00:02:39.517
+Before doing anything, ask yourself,
+
+63
+00:02:39.517 --> 00:02:42.150
+"Is this even a case where
+I should be using AI?"
+
+64
+00:02:42.150 --> 00:02:45.630
+For example, don't rely
+on responses as medical,
+
+65
+00:02:45.630 --> 00:02:47.940
+legal, financial or other
+professional advice.
+
+66
+00:02:47.940 --> 00:02:50.850
+Always consult a
+professional on these topics.
+
+67
+00:02:50.850 --> 00:02:52.950
+If your task involves sensitive,
+
+68
+00:02:52.950 --> 00:02:56.160
+confidential, personal
+or proprietary data,
+
+69
+00:02:56.160 --> 00:02:58.440
+consider whether or not you should use AI.
+
+70
+00:02:58.440 --> 00:03:00.667
+Another question you
+should ask yourself is,
+
+71
+00:03:00.667 --> 00:03:02.940
+"Can I use an off the shelf solution,"
+
+72
+00:03:02.940 --> 00:03:05.670
+or "Is it better suited
+for an enterprise tool?"
+
+73
+00:03:05.670 --> 00:03:08.130
+You should always consult
+your employer's policies
+
+74
+00:03:08.130 --> 00:03:09.270
+on using AI at work
+
+75
+00:03:09.270 --> 00:03:13.500
+and avoid inputting confidential
+data into a public AI tool.
+
+76
+00:03:13.500 --> 00:03:17.400
+Next up, C which stands for check.
+
+77
+00:03:17.400 --> 00:03:19.800
+After you've decided that
+AI is right for the task,
+
+78
+00:03:19.800 --> 00:03:22.110
+check the outputs before using them.
+
+79
+00:03:22.110 --> 00:03:24.990
+First, check for objectivity.
+
+80
+00:03:24.990 --> 00:03:26.640
+Remember that a model's training data
+
+81
+00:03:26.640 --> 00:03:29.250
+can sometimes produce unintended results.
+
+82
+00:03:29.250 --> 00:03:30.690
+It's your responsibility
+
+83
+00:03:30.690 --> 00:03:33.240
+to critically review the AI's response.
+
+84
+00:03:33.240 --> 00:03:35.610
+This involves looking out
+for one-sided arguments,
+
+85
+00:03:35.610 --> 00:03:37.470
+loaded language, stereotypes
+
+86
+00:03:37.470 --> 00:03:41.010
+or other unfair assumptions
+that AI may have learned.
+
+87
+00:03:41.010 --> 00:03:44.220
+Next, check for accuracy.
+
+88
+00:03:44.220 --> 00:03:45.930
+Verify the outputs you receive
+
+89
+00:03:45.930 --> 00:03:47.610
+and make sure that any information
+
+90
+00:03:47.610 --> 00:03:51.330
+which is presented as factual actually is.
+
+91
+00:03:51.330 --> 00:03:52.500
+When checking your outputs,
+
+92
+00:03:52.500 --> 00:03:55.170
+you also wanna look out for bias.
+
+93
+00:03:55.170 --> 00:03:56.100
+In many cases,
+
+94
+00:03:56.100 --> 00:03:58.380
+it's what you do with
+the output that matters.
+
+95
+00:03:58.380 --> 00:03:59.670
+You should always check
+
+96
+00:03:59.670 --> 00:04:02.850
+that the output is appropriate
+for its intended use.
+
+97
+00:04:02.850 --> 00:04:04.980
+You should not rely on
+AI to finish work for you
+
+98
+00:04:04.980 --> 00:04:06.660
+without your oversight.
+
+99
+00:04:06.660 --> 00:04:09.240
+Completing the task requires your judgment
+
+100
+00:04:09.240 --> 00:04:10.680
+and accountability.
+
+101
+00:04:10.680 --> 00:04:14.100
+Finally, T stands for tell.
+
+102
+00:04:14.100 --> 00:04:15.900
+Being a responsible AI user
+
+103
+00:04:15.900 --> 00:04:18.270
+involves disclosing your use of it.
+
+104
+00:04:18.270 --> 00:04:21.180
+Always be transparent
+about your use of AI.
+
+105
+00:04:21.180 --> 00:04:23.580
+One way that Google is helping
+to increase transparency
+
+106
+00:04:23.580 --> 00:04:26.340
+of AI use is with SynthID,
+
+107
+00:04:26.340 --> 00:04:28.560
+a new tool which adds digital watermarks
+
+108
+00:04:28.560 --> 00:04:31.350
+into AI-generated content like videos
+
+109
+00:04:31.350 --> 00:04:34.320
+so the use of AI can be detected easily.
+
+110
+00:04:34.320 --> 00:04:37.140
+Okay, we've covered all parts of ACT.
+
+111
+00:04:37.140 --> 00:04:39.420
+Before you use AI, ask yourself
+
+112
+00:04:39.420 --> 00:04:42.540
+whether or not the tool
+is right for the task,
+
+113
+00:04:42.540 --> 00:04:45.870
+check all AI-generated
+outputs before using them
+
+114
+00:04:45.870 --> 00:04:48.990
+and when you do, tell people.
+
+115
+00:04:48.990 --> 00:04:50.610
+And remember, it's up to you
+
+116
+00:04:50.610 --> 00:04:53.130
+to be the human-in-the-loop at each step.
+
+117
+00:04:53.130 --> 00:04:54.843
+Now you're ready to keep going.

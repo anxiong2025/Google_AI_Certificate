@@ -1,0 +1,452 @@
+WEBVTT
+
+1
+00:00:00.360 --> 00:00:01.770
+- Vibe coding lets you build apps
+
+2
+00:00:01.770 --> 00:00:05.550
+that solve your work problems,
+but why do we call it that?
+
+3
+00:00:05.550 --> 00:00:08.340
+Well, it's a fun way for you
+to build something helpful
+
+4
+00:00:08.340 --> 00:00:10.710
+without needing to code.
+
+5
+00:00:10.710 --> 00:00:12.660
+All you have to do is know the vibe
+
+6
+00:00:12.660 --> 00:00:14.580
+of what you want to achieve.
+
+7
+00:00:14.580 --> 00:00:16.710
+Okay, there's a little
+more to it than that,
+
+8
+00:00:16.710 --> 00:00:19.020
+and that's what I'm here to show you.
+
+9
+00:00:19.020 --> 00:00:21.690
+See, a year ago, when
+these models had come out,
+
+10
+00:00:21.690 --> 00:00:25.290
+I wanted to see if I could
+make a childhood game of mine.
+
+11
+00:00:25.290 --> 00:00:27.810
+And I didn't know the
+limits of what was possible,
+
+12
+00:00:27.810 --> 00:00:32.010
+but for three days I persevered
+through all sorts of errors,
+
+13
+00:00:32.010 --> 00:00:35.493
+and by the end of it,
+somehow that game was made.
+
+14
+00:00:36.330 --> 00:00:38.790
+Now, fast-forward a year from then.
+
+15
+00:00:38.790 --> 00:00:41.940
+Today, if I just give
+the model one screenshot,
+
+16
+00:00:41.940 --> 00:00:44.133
+it can make the entire game for me.
+
+17
+00:00:45.000 --> 00:00:47.340
+It's wild how fast
+these things are moving.
+
+18
+00:00:47.340 --> 00:00:50.340
+And so how do you bring that to your work?
+
+19
+00:00:50.340 --> 00:00:51.780
+To give you an idea,
+
+20
+00:00:51.780 --> 00:00:54.810
+we'll practice building
+a few apps together.
+
+21
+00:00:54.810 --> 00:00:58.110
+Here's a sneak preview of
+the three apps we'll build.
+
+22
+00:00:58.110 --> 00:01:00.900
+The first app I like
+to call The Tiebreaker.
+
+23
+00:01:00.900 --> 00:01:02.280
+This is an app that I built
+
+24
+00:01:02.280 --> 00:01:05.610
+specifically to help
+make tricky decisions.
+
+25
+00:01:05.610 --> 00:01:07.560
+You'll customize it so that it understands
+
+26
+00:01:07.560 --> 00:01:10.170
+your preferred approach
+to decision-making.
+
+27
+00:01:10.170 --> 00:01:12.030
+For example, do you like to compare
+
+28
+00:01:12.030 --> 00:01:13.710
+two options side by side,
+
+29
+00:01:13.710 --> 00:01:15.660
+or are you someone who likes to go deep
+
+30
+00:01:15.660 --> 00:01:18.090
+on a cost-benefit analysis?
+
+31
+00:01:18.090 --> 00:01:20.160
+This app will help you
+analyze your options
+
+32
+00:01:20.160 --> 00:01:23.400
+so that you feel good
+about your decisions.
+
+33
+00:01:23.400 --> 00:01:27.150
+The second app is a Marketing
+Materials Generator.
+
+34
+00:01:27.150 --> 00:01:29.160
+Need creative for an upcoming launch,
+
+35
+00:01:29.160 --> 00:01:31.470
+or a promotion, or an announcement?
+
+36
+00:01:31.470 --> 00:01:33.330
+With this app, you can create ads,
+
+37
+00:01:33.330 --> 00:01:35.460
+stickers, banners, posters,
+
+38
+00:01:35.460 --> 00:01:38.700
+and other visuals to help
+you sell your product.
+
+39
+00:01:38.700 --> 00:01:40.920
+This app speeds up the creative process
+
+40
+00:01:40.920 --> 00:01:42.630
+so you can create custom assets
+
+41
+00:01:42.630 --> 00:01:45.540
+for every segment of your audience.
+
+42
+00:01:45.540 --> 00:01:46.650
+The third app we'll build
+
+43
+00:01:46.650 --> 00:01:49.710
+is what I like to call
+an interactive dashboard.
+
+44
+00:01:49.710 --> 00:01:52.650
+With this app, you'll be able
+to visualize your data fast.
+
+45
+00:01:52.650 --> 00:01:54.690
+No more static graphs or charts
+
+46
+00:01:54.690 --> 00:01:56.430
+you have to refresh every day.
+
+47
+00:01:56.430 --> 00:01:59.340
+This app keeps your data
+visualizations fresh
+
+48
+00:01:59.340 --> 00:02:02.163
+so that anyone can get
+answers when they need them.
+
+49
+00:02:03.090 --> 00:02:04.530
+Feeling excited?
+
+50
+00:02:04.530 --> 00:02:06.690
+Before we dive in, I want to introduce you
+
+51
+00:02:06.690 --> 00:02:10.470
+to a new AI tool, Google AI Studio.
+
+52
+00:02:10.470 --> 00:02:12.480
+At Google, I lead an incredible team
+
+53
+00:02:12.480 --> 00:02:15.210
+of engineers, designers,
+and product managers
+
+54
+00:02:15.210 --> 00:02:17.940
+who help craft the experience in AI Studio
+
+55
+00:02:17.940 --> 00:02:19.980
+whenever there's a new AI model
+
+56
+00:02:19.980 --> 00:02:23.880
+or capability that is released
+so that people like you
+
+57
+00:02:23.880 --> 00:02:26.280
+understand how to make the most of it.
+
+58
+00:02:26.280 --> 00:02:29.340
+We'll use AI Studio to build our apps.
+
+59
+00:02:29.340 --> 00:02:34.170
+To access it, go to aistudio.google.com.
+
+60
+00:02:34.170 --> 00:02:36.240
+Once you get there, you'll notice the page
+
+61
+00:02:36.240 --> 00:02:38.250
+is a bit different from Gemini,
+
+62
+00:02:38.250 --> 00:02:41.850
+so let's take a second
+to walk through the tool.
+
+63
+00:02:41.850 --> 00:02:45.720
+AI Studio starts on a home
+screen with a few main options.
+
+64
+00:02:45.720 --> 00:02:46.800
+The first is chat,
+
+65
+00:02:46.800 --> 00:02:49.770
+where you'll write your
+prompts to get an output.
+
+66
+00:02:49.770 --> 00:02:50.610
+On the right side,
+
+67
+00:02:50.610 --> 00:02:53.550
+you'll see settings to
+modify your outputs.
+
+68
+00:02:53.550 --> 00:02:55.590
+You can select from all
+of the newest models
+
+69
+00:02:55.590 --> 00:02:56.970
+to complete your task,
+
+70
+00:02:56.970 --> 00:02:59.520
+add system instructions
+that the model processes
+
+71
+00:02:59.520 --> 00:03:02.250
+before using your prompt
+to provide output,
+
+72
+00:03:02.250 --> 00:03:04.830
+adjust the temperature, and more.
+
+73
+00:03:04.830 --> 00:03:06.300
+Next, we have build,
+
+74
+00:03:06.300 --> 00:03:09.690
+which is where we'll spend
+our time in this course.
+
+75
+00:03:09.690 --> 00:03:12.150
+When you select the build
+function to create an app,
+
+76
+00:03:12.150 --> 00:03:14.490
+you'll see a text box at the top.
+
+77
+00:03:14.490 --> 00:03:18.030
+This is where I'll prompt
+Gemini models to vibe code.
+
+78
+00:03:18.030 --> 00:03:20.160
+It works just like the other AI tools,
+
+79
+00:03:20.160 --> 00:03:23.640
+but this time we'll direct
+it to build the three apps.
+
+80
+00:03:23.640 --> 00:03:26.490
+To vibe code your own app,
+you can either write a prompt
+
+81
+00:03:26.490 --> 00:03:29.010
+or use one of the samples below.
+
+82
+00:03:29.010 --> 00:03:33.270
+As we build each app, pay close
+attention to a few things.
+
+83
+00:03:33.270 --> 00:03:35.700
+Notice the natural flow of conversation
+
+84
+00:03:35.700 --> 00:03:38.100
+between you and AI Studio.
+
+85
+00:03:38.100 --> 00:03:39.960
+You'll iterate by using plain language
+
+86
+00:03:39.960 --> 00:03:43.020
+to describe what you need
+to refine requirements,
+
+87
+00:03:43.020 --> 00:03:46.830
+to test the output, and
+to improve the result.
+
+88
+00:03:46.830 --> 00:03:48.787
+Next, pay attention to how specific
+
+89
+00:03:48.787 --> 00:03:51.210
+you'll need to get with your feedback.
+
+90
+00:03:51.210 --> 00:03:54.900
+That's because vague descriptions
+yield generic results.
+
+91
+00:03:54.900 --> 00:03:57.720
+The more precise you are when
+describing what you need,
+
+92
+00:03:57.720 --> 00:04:01.020
+the more likely the app will
+match what you're looking for.
+
+93
+00:04:01.020 --> 00:04:04.890
+You are the director, user,
+and tester of your app,
+
+94
+00:04:04.890 --> 00:04:07.503
+and now you can use AI
+as your developer tool.
+
+95
+00:04:08.370 --> 00:04:10.260
+Finally, the coolest part.
+
+96
+00:04:10.260 --> 00:04:11.580
+See how fast you'll move
+
+97
+00:04:11.580 --> 00:04:14.250
+from an idea to a working prototype.
+
+98
+00:04:14.250 --> 00:04:16.440
+In the time it takes to
+have a chat over coffee,
+
+99
+00:04:16.440 --> 00:04:18.990
+you can go from, "I wish
+there was a tool for this,"
+
+100
+00:04:18.990 --> 00:04:21.240
+to, "Here's my custom solution."
+
+101
+00:04:21.240 --> 00:04:22.773
+So let me show you how.

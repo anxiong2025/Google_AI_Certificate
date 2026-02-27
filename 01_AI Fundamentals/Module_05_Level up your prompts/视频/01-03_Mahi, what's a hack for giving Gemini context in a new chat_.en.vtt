@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:04.140 --> 00:00:08.010
+- Generally, we see that
+as chats get longer,
+
+2
+00:00:08.010 --> 00:00:09.480
+just the amount of context
+
+3
+00:00:09.480 --> 00:00:12.270
+Gemini has to keep track of gets bigger.
+
+4
+00:00:12.270 --> 00:00:16.740
+And so you may see some of the
+quality start to deteriorate,
+
+5
+00:00:16.740 --> 00:00:19.143
+you know, many, many, many turns later.
+
+6
+00:00:20.370 --> 00:00:21.360
+That could be a good time
+
+7
+00:00:21.360 --> 00:00:24.453
+for you to kind of restart the chat.
+
+8
+00:00:24.670 --> 00:00:28.470
+The way... You know, one way you could do that
+
+9
+00:00:28.470 --> 00:00:30.210
+is actually just ask Gemini,
+
+10
+00:00:30.210 --> 00:00:32.100
+like, "Can you summarize this thread?
+
+11
+00:00:32.100 --> 00:00:33.810
+I'm gonna start another thread,"
+
+12
+00:00:33.810 --> 00:00:36.000
+and get an output
+
+13
+00:00:36.000 --> 00:00:37.560
+of, like, what has
+happened in this thread,
+
+14
+00:00:37.560 --> 00:00:38.820
+what you have tried.
+
+15
+00:00:38.820 --> 00:00:39.930
+I would still upload,
+
+16
+00:00:39.930 --> 00:00:41.580
+if you, you know, had any attachments
+
+17
+00:00:41.580 --> 00:00:42.570
+in that original thread,
+
+18
+00:00:42.570 --> 00:00:44.073
+I would re-upload them again.
+
+19
+00:00:44.940 --> 00:00:47.977
+But you can do that same format of, like,
+
+20
+00:00:47.977 --> 00:00:50.430
+"I was working on this problem.
+
+21
+00:00:50.430 --> 00:00:54.300
+Here are the relevant docs attached again.
+
+22
+00:00:54.300 --> 00:00:55.890
+I have already done this much,"
+
+23
+00:00:55.890 --> 00:00:58.020
+like, paste in that summarized content,
+
+24
+00:00:58.020 --> 00:01:00.436
+and then ask your next
+query of what to do.

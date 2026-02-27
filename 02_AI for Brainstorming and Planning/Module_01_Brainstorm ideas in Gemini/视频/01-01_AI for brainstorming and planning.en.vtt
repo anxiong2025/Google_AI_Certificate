@@ -1,0 +1,351 @@
+WEBVTT
+
+1
+00:00:01.020 --> 00:00:02.550
+- The biggest things we achieve at work
+
+2
+00:00:02.550 --> 00:00:04.260
+often start as an idea.
+
+3
+00:00:04.260 --> 00:00:06.660
+But the journey from
+a spark of inspiration
+
+4
+00:00:06.660 --> 00:00:09.240
+to a finished project isn't easy.
+
+5
+00:00:09.240 --> 00:00:11.760
+Identifying the right
+solution, building a plan,
+
+6
+00:00:11.760 --> 00:00:14.280
+and, you know, managing all
+the bumps along the way?
+
+7
+00:00:14.280 --> 00:00:16.140
+That can feel like a lot.
+
+8
+00:00:16.140 --> 00:00:19.320
+But what if you had a new
+partner in this process?
+
+9
+00:00:19.320 --> 00:00:22.680
+A creative collaborator to help
+you generate possibilities,
+
+10
+00:00:22.680 --> 00:00:25.560
+a master strategist to
+stress test your assumptions,
+
+11
+00:00:25.560 --> 00:00:27.180
+and an execution expert
+
+12
+00:00:27.180 --> 00:00:30.840
+to build a plan based on your
+ideas to get the job done?
+
+13
+00:00:30.840 --> 00:00:32.760
+Hi, my name is Yul.
+
+14
+00:00:32.760 --> 00:00:34.560
+I'm a VPO of Product Management at Google,
+
+15
+00:00:34.560 --> 00:00:36.240
+and I help lead a research team
+
+16
+00:00:36.240 --> 00:00:37.920
+called Paradigms of Intelligence,
+
+17
+00:00:37.920 --> 00:00:39.120
+which tries to understand
+
+18
+00:00:39.120 --> 00:00:41.550
+the nature and building
+blocks of intelligence.
+
+19
+00:00:41.550 --> 00:00:44.430
+Now, in this course, we'll
+show you how Gemini can be
+
+20
+00:00:44.430 --> 00:00:46.080
+that creative partner for you
+
+21
+00:00:46.080 --> 00:00:49.410
+so that you can think big and
+achieve your goals at work.
+
+22
+00:00:49.410 --> 00:00:52.860
+First, you'll learn techniques
+to generate ideas with you.
+
+23
+00:00:52.860 --> 00:00:55.560
+We'll simulate experts and
+push creative boundaries
+
+24
+00:00:55.560 --> 00:00:58.410
+to uncover solutions you
+never would've considered.
+
+25
+00:00:58.410 --> 00:01:00.150
+And we'll show you how you can use Gemini
+
+26
+00:01:00.150 --> 00:01:03.540
+to bring industry knowledge
+into the process to help.
+
+27
+00:01:03.540 --> 00:01:06.450
+Next, you'll pressure test solutions.
+
+28
+00:01:06.450 --> 00:01:08.010
+Now, the best ideas are ones
+
+29
+00:01:08.010 --> 00:01:10.800
+that can stand up to potential
+problems in the future.
+
+30
+00:01:10.800 --> 00:01:14.640
+But spotting those problems
+before they happen can be tough.
+
+31
+00:01:14.640 --> 00:01:17.190
+You'll learn to use Gemini
+as a devil's advocate
+
+32
+00:01:17.190 --> 00:01:21.510
+to find risks in your strategy
+before they become problems.
+
+33
+00:01:21.510 --> 00:01:23.010
+You'll also learn how to apply constraints
+
+34
+00:01:23.010 --> 00:01:24.780
+to get to the most relevant solutions
+
+35
+00:01:24.780 --> 00:01:27.240
+so that you can choose the best path.
+
+36
+00:01:27.240 --> 00:01:29.100
+Finally, you'll manage your project
+
+37
+00:01:29.100 --> 00:01:31.500
+by getting everyone on the same page.
+
+38
+00:01:31.500 --> 00:01:33.180
+We'll show you how to use NotebookLM
+
+39
+00:01:33.180 --> 00:01:34.860
+to create an information hub
+
+40
+00:01:34.860 --> 00:01:36.540
+where you and your
+teammates can ask questions
+
+41
+00:01:36.540 --> 00:01:39.840
+and get answers about the
+project in literally seconds.
+
+42
+00:01:39.840 --> 00:01:41.550
+It all sounds pretty great, right?
+
+43
+00:01:41.550 --> 00:01:43.290
+Well, it kind of is.
+
+44
+00:01:43.290 --> 00:01:44.640
+But to make this a reality,
+
+45
+00:01:44.640 --> 00:01:46.890
+you'll also need to
+understand some key principles
+
+46
+00:01:46.890 --> 00:01:48.870
+for using AI effectively.
+
+47
+00:01:48.870 --> 00:01:51.390
+But, don't worry, we've got you covered.
+
+48
+00:01:51.390 --> 00:01:53.910
+First up is problem framing.
+
+49
+00:01:53.910 --> 00:01:56.460
+Before you even consider using AI,
+
+50
+00:01:56.460 --> 00:01:57.660
+you need to clearly define
+
+51
+00:01:57.660 --> 00:01:59.940
+the problem you're
+trying to solve and why.
+
+52
+00:01:59.940 --> 00:02:01.680
+Where you are and where you want to go
+
+53
+00:02:01.680 --> 00:02:04.173
+will anchor the process
+from start to finish.
+
+54
+00:02:05.190 --> 00:02:07.740
+You also provide essential context.
+
+55
+00:02:07.740 --> 00:02:09.780
+Now, AI doesn't have all
+the background information
+
+56
+00:02:09.780 --> 00:02:12.480
+about your customers, your team dynamics,
+
+57
+00:02:12.480 --> 00:02:14.400
+or your leadership's priorities.
+
+58
+00:02:14.400 --> 00:02:15.870
+Those are the critical things
+
+59
+00:02:15.870 --> 00:02:17.730
+that determine which solutions to pursue
+
+60
+00:02:17.730 --> 00:02:20.010
+and what steps should be
+added to your project plan.
+
+61
+00:02:20.010 --> 00:02:22.920
+And that information
+can only come from you.
+
+62
+00:02:22.920 --> 00:02:23.970
+Throughout this process,
+
+63
+00:02:23.970 --> 00:02:26.610
+you're setting up the problem,
+exploring the options,
+
+64
+00:02:26.610 --> 00:02:27.690
+and using your judgment
+
+65
+00:02:27.690 --> 00:02:30.390
+to make a decision on what to do next.
+
+66
+00:02:30.390 --> 00:02:32.070
+Now, AI isn't perfect,
+
+67
+00:02:32.070 --> 00:02:33.900
+and it can sometimes give you ideas
+
+68
+00:02:33.900 --> 00:02:35.100
+that won't be a good fit.
+
+69
+00:02:35.100 --> 00:02:37.710
+So, please, be a tough critic.
+
+70
+00:02:37.710 --> 00:02:38.910
+With this new way of working,
+
+71
+00:02:38.910 --> 00:02:40.200
+you'll have a resource to turn to
+
+72
+00:02:40.200 --> 00:02:42.780
+at almost every stage of
+the project lifecycle,
+
+73
+00:02:42.780 --> 00:02:44.880
+from idea to plan to delivery.
+
+74
+00:02:44.880 --> 00:02:46.530
+It's a mindset shift.
+
+75
+00:02:46.530 --> 00:02:47.820
+And, by the end of this course,
+
+76
+00:02:47.820 --> 00:02:49.800
+you'll be able to break
+through creative blocks,
+
+77
+00:02:49.800 --> 00:02:53.130
+find unexpected solutions
+to complicated problems,
+
+78
+00:02:53.130 --> 00:02:55.380
+and turn your best ideas into action plans
+
+79
+00:02:55.380 --> 00:02:56.760
+that drive progress.
+
+80
+00:02:56.760 --> 00:02:57.593
+So good luck.

@@ -1,0 +1,668 @@
+WEBVTT
+
+1
+00:00:00.900 --> 00:00:03.690
+- Imagine you're stuck in a long meeting,
+
+2
+00:00:03.690 --> 00:00:06.660
+and your coworker is taking
+everyone's lunch order.
+
+3
+00:00:06.660 --> 00:00:08.400
+You say you'd like a sandwich,
+
+4
+00:00:08.400 --> 00:00:11.790
+and they end up ordering
+you a tuna fish sandwich,
+
+5
+00:00:11.790 --> 00:00:14.130
+which is not your thing.
+
+6
+00:00:14.130 --> 00:00:15.750
+Since you didn't clearly communicate
+
+7
+00:00:15.750 --> 00:00:19.020
+exactly what you wanted, you
+didn't get a great outcome
+
+8
+00:00:19.020 --> 00:00:21.220
+despite your coworker's
+willingness to help.
+
+9
+00:00:22.320 --> 00:00:24.390
+AI works similarly.
+
+10
+00:00:24.390 --> 00:00:27.870
+It's best when you communicate
+clearly to get what you want.
+
+11
+00:00:27.870 --> 00:00:30.360
+You need to make sure you're
+giving it detailed instructions
+
+12
+00:00:30.360 --> 00:00:32.100
+and asking good questions.
+
+13
+00:00:32.100 --> 00:00:34.380
+This is called prompting.
+
+14
+00:00:34.380 --> 00:00:37.350
+When you prompt AI, there
+are many ways to go about it,
+
+15
+00:00:37.350 --> 00:00:39.990
+but the key principles are being clear
+
+16
+00:00:39.990 --> 00:00:42.240
+and providing context.
+
+17
+00:00:42.240 --> 00:00:43.860
+We'll start with a framework you can use
+
+18
+00:00:43.860 --> 00:00:45.840
+to make sure your prompts
+have clear directions
+
+19
+00:00:45.840 --> 00:00:47.670
+and relevant information.
+
+20
+00:00:47.670 --> 00:00:49.260
+This gives you a solid structure
+
+21
+00:00:49.260 --> 00:00:53.040
+and guidelines for what to say
+to AI so you aren't guessing.
+
+22
+00:00:53.040 --> 00:00:55.140
+I'll show you how this works in Gemini.
+
+23
+00:00:55.140 --> 00:00:56.850
+Consider this scenario.
+
+24
+00:00:56.850 --> 00:00:58.020
+You're looking for advice
+
+25
+00:00:58.020 --> 00:01:00.990
+on how to make a meeting more effective.
+
+26
+00:01:00.990 --> 00:01:08.520
+We'll start by going to gemini.google.com.
+
+27
+00:01:08.520 --> 00:01:11.760
+First, describe the persona
+that you want Gemini to take on.
+
+28
+00:01:11.760 --> 00:01:13.920
+That means decide what
+expertise or knowledge
+
+29
+00:01:13.920 --> 00:01:15.360
+you want Gemini to draw from
+
+30
+00:01:15.360 --> 00:01:17.730
+before explaining what you want.
+
+31
+00:01:17.730 --> 00:01:19.590
+In this example, you could tell Gemini
+
+32
+00:01:19.590 --> 00:01:22.890
+to take on the persona of
+someone who's highly experienced
+
+33
+00:01:22.890 --> 00:01:27.427
+with large projects, which tend
+to require lots of meetings.
+
+34
+00:01:27.427 --> 00:01:29.040
+"You are a seasoned team leader
+
+35
+00:01:29.040 --> 00:01:32.880
+with a proven track record
+of managing large projects."
+
+36
+00:01:32.880 --> 00:01:36.907
+Then describe a task you
+want AI to help you with.
+
+37
+00:01:36.907 --> 00:01:39.990
+"Give me some tips for running
+more effective meetings."
+
+38
+00:01:39.990 --> 00:01:41.340
+Next, specify the format
+
+39
+00:01:41.340 --> 00:01:43.500
+by telling Gemini what the
+output should look like.
+
+40
+00:01:43.500 --> 00:01:45.600
+It could be a list of pros
+and cons, bullet points,
+
+41
+00:01:45.600 --> 00:01:47.640
+or a specific length or tone.
+
+42
+00:01:47.640 --> 00:01:51.357
+Let's add, "Format your
+response as a bullet list."
+
+43
+00:01:52.260 --> 00:01:53.670
+Now you need to set the context.
+
+44
+00:01:53.670 --> 00:01:55.920
+Ask yourself, what does AI need to know
+
+45
+00:01:55.920 --> 00:01:57.630
+in order to get this right?
+
+46
+00:01:57.630 --> 00:02:00.840
+For starters, AI doesn't know
+how large your company is
+
+47
+00:02:00.840 --> 00:02:02.670
+or how teams work together.
+
+48
+00:02:02.670 --> 00:02:04.650
+It also doesn't know
+your unique challenge,
+
+49
+00:02:04.650 --> 00:02:07.770
+which is making clear decisions
+during status meetings.
+
+50
+00:02:07.770 --> 00:02:12.570
+We'll add, "Our teams often
+work cross-functionally,
+
+51
+00:02:12.570 --> 00:02:14.550
+and we're struggling
+to make clear decisions
+
+52
+00:02:14.550 --> 00:02:18.267
+on some aspects of the project
+during our status meetings."
+
+53
+00:02:19.560 --> 00:02:21.000
+One more note on the framework.
+
+54
+00:02:21.000 --> 00:02:24.270
+There are plenty of ways to
+construct an effective prompt.
+
+55
+00:02:24.270 --> 00:02:27.090
+The order in which you construct
+a prompt is less important
+
+56
+00:02:27.090 --> 00:02:29.370
+than the substance of the prompt itself.
+
+57
+00:02:29.370 --> 00:02:31.743
+Now let's run our prompt
+and see what we get.
+
+58
+00:02:33.450 --> 00:02:34.283
+Hmm.
+
+59
+00:02:35.520 --> 00:02:38.190
+Okay, the idea of assigning
+a dedicated decision maker
+
+60
+00:02:38.190 --> 00:02:40.440
+and a note taker is interesting.
+
+61
+00:02:40.440 --> 00:02:42.690
+It does help to know who has which role
+
+62
+00:02:42.690 --> 00:02:44.580
+before the meeting starts.
+
+63
+00:02:44.580 --> 00:02:46.380
+Make sure to check the output AI gives you
+
+64
+00:02:46.380 --> 00:02:47.640
+before you use it.
+
+65
+00:02:47.640 --> 00:02:49.590
+This is a crucial step.
+
+66
+00:02:49.590 --> 00:02:51.720
+In some cases, the first
+response you receive
+
+67
+00:02:51.720 --> 00:02:53.580
+may have room for improvement.
+
+68
+00:02:53.580 --> 00:02:55.050
+Maybe the different folks on my team
+
+69
+00:02:55.050 --> 00:02:56.160
+work in different time zones,
+
+70
+00:02:56.160 --> 00:02:58.170
+and it's hard to get the
+dedicated decision maker
+
+71
+00:02:58.170 --> 00:03:01.230
+in the meeting because it's
+outside of their working hours.
+
+72
+00:03:01.230 --> 00:03:03.750
+You can add this context
+right into the same chat
+
+73
+00:03:03.750 --> 00:03:05.160
+and ask it to update its advice
+
+74
+00:03:05.160 --> 00:03:07.170
+based on the additional information.
+
+75
+00:03:07.170 --> 00:03:08.610
+Prompting is a foundational skill
+
+76
+00:03:08.610 --> 00:03:11.010
+for getting great results with AI.
+
+77
+00:03:11.010 --> 00:03:14.160
+Here are a few more tips that
+can help elevate your prompts.
+
+78
+00:03:14.160 --> 00:03:16.350
+Provide an example or a reference.
+
+79
+00:03:16.350 --> 00:03:19.020
+Just like seeing an example
+helps you understand a task,
+
+80
+00:03:19.020 --> 00:03:21.813
+giving one to AI helps
+it understand your needs.
+
+81
+00:03:22.650 --> 00:03:24.510
+If you're looking for
+advice on running a meeting,
+
+82
+00:03:24.510 --> 00:03:27.390
+attach a past agenda as a reference.
+
+83
+00:03:27.390 --> 00:03:28.680
+It's also helpful to enlist
+
+84
+00:03:28.680 --> 00:03:31.140
+Gemini's multimodal
+capabilities when prompting
+
+85
+00:03:31.140 --> 00:03:33.990
+to help it better understand
+what you're looking for.
+
+86
+00:03:33.990 --> 00:03:35.820
+This means including
+different types of media
+
+87
+00:03:35.820 --> 00:03:38.763
+in your prompt, like
+documents, images, or websites.
+
+88
+00:03:39.720 --> 00:03:42.210
+Think about how you would
+communicate with a hairdresser.
+
+89
+00:03:42.210 --> 00:03:44.850
+You might describe what
+haircut you want using words,
+
+90
+00:03:44.850 --> 00:03:47.700
+but sometimes showing a
+picture can be more helpful.
+
+91
+00:03:47.700 --> 00:03:49.530
+You can do the same with Gemini.
+
+92
+00:03:49.530 --> 00:03:51.060
+You may need to use several prompts
+
+93
+00:03:51.060 --> 00:03:53.070
+to keep on improving your output.
+
+94
+00:03:53.070 --> 00:03:55.650
+This process is called iteration,
+
+95
+00:03:55.650 --> 00:03:57.570
+and there's a few ways to do it.
+
+96
+00:03:57.570 --> 00:04:00.150
+First, you can edit your initial prompt.
+
+97
+00:04:00.150 --> 00:04:02.400
+For example, you can add more details
+
+98
+00:04:02.400 --> 00:04:05.520
+to the persona, task, format, or context,
+
+99
+00:04:05.520 --> 00:04:08.040
+or you can try writing a similar prompt
+
+100
+00:04:08.040 --> 00:04:09.870
+with different phrasing.
+
+101
+00:04:09.870 --> 00:04:12.330
+Another option, you can
+break up your prompt
+
+102
+00:04:12.330 --> 00:04:13.860
+into smaller parts.
+
+103
+00:04:13.860 --> 00:04:17.130
+Instead of asking for a
+full solution all in one go,
+
+104
+00:04:17.130 --> 00:04:18.870
+you could first ask for principles
+
+105
+00:04:18.870 --> 00:04:21.000
+of effective decision making.
+
+106
+00:04:21.000 --> 00:04:22.560
+Then you could follow up
+
+107
+00:04:22.560 --> 00:04:24.330
+and ask how you could
+apply those principles
+
+108
+00:04:24.330 --> 00:04:25.650
+in your meetings.
+
+109
+00:04:25.650 --> 00:04:28.320
+Finally, you could ask
+for a meeting agenda
+
+110
+00:04:28.320 --> 00:04:31.260
+that will better enable decision making.
+
+111
+00:04:31.260 --> 00:04:32.820
+This process helps AI
+
+112
+00:04:32.820 --> 00:04:36.150
+to reason through each part
+of the request at a time.
+
+113
+00:04:36.150 --> 00:04:37.770
+You're focusing it on a smaller task
+
+114
+00:04:37.770 --> 00:04:39.630
+and checking in along the way.
+
+115
+00:04:39.630 --> 00:04:43.230
+Finally, you can add
+constraints into your prompt.
+
+116
+00:04:43.230 --> 00:04:45.930
+Constraints are requirements
+that the AI should meet.
+
+117
+00:04:45.930 --> 00:04:48.570
+For example, "Provide solutions
+
+118
+00:04:48.570 --> 00:04:50.100
+that can be implemented within a week,"
+
+119
+00:04:50.100 --> 00:04:53.400
+or, "Don't suggest
+lengthening the meeting."
+
+120
+00:04:53.400 --> 00:04:54.810
+Okay, one last tip.
+
+121
+00:04:54.810 --> 00:04:57.240
+Remember to use one chat per topic.
+
+122
+00:04:57.240 --> 00:04:59.760
+That's because everything
+you enter into a single chat
+
+123
+00:04:59.760 --> 00:05:01.920
+becomes context for AI.
+
+124
+00:05:01.920 --> 00:05:04.530
+This is possible because
+of long context windows,
+
+125
+00:05:04.530 --> 00:05:06.750
+meaning you can keep the chat going
+
+126
+00:05:06.750 --> 00:05:09.300
+and even return to it days or weeks later
+
+127
+00:05:09.300 --> 00:05:11.940
+and pick up right where you left off.
+
+128
+00:05:11.940 --> 00:05:14.460
+But if you switch to a new
+topic in that same chat,
+
+129
+00:05:14.460 --> 00:05:16.710
+things might get confused,
+
+130
+00:05:16.710 --> 00:05:20.070
+so when changing topics,
+always start a new chat.
+
+131
+00:05:20.070 --> 00:05:22.140
+Putting this framework
+and tips into practice
+
+132
+00:05:22.140 --> 00:05:24.630
+is the key to effective prompting.
+
+133
+00:05:24.630 --> 00:05:26.460
+This approach will help
+you better guide AI
+
+134
+00:05:26.460 --> 00:05:28.890
+towards the results
+that you're looking for.
+
+135
+00:05:28.890 --> 00:05:30.900
+And the more you practice, experiment,
+
+136
+00:05:30.900 --> 00:05:32.220
+and get more comfortable,
+
+137
+00:05:32.220 --> 00:05:34.380
+the better your results will become.
+
+138
+00:05:34.380 --> 00:05:36.630
+Most importantly, as you
+continue writing prompts
+
+139
+00:05:36.630 --> 00:05:38.340
+for different types of tasks,
+
+140
+00:05:38.340 --> 00:05:40.290
+the way you use AI will evolve
+
+141
+00:05:40.290 --> 00:05:42.090
+from just giving it simple commands
+
+142
+00:05:42.090 --> 00:05:44.970
+to having ongoing
+collaborative conversations
+
+143
+00:05:44.970 --> 00:05:46.950
+that add more value to your work.
+
+144
+00:05:46.950 --> 00:05:49.290
+For example, once I planned a trip,
+
+145
+00:05:49.290 --> 00:05:50.790
+and I found that it was really useful
+
+146
+00:05:50.790 --> 00:05:53.190
+to add the ages of the
+people who were traveling
+
+147
+00:05:53.190 --> 00:05:54.630
+and then to return in the future
+
+148
+00:05:54.630 --> 00:05:56.580
+when the dates changed to find out,
+
+149
+00:05:56.580 --> 00:05:58.530
+did the itinerary that I had before work,
+
+150
+00:05:58.530 --> 00:06:00.240
+or did it need to be updated?
+
+151
+00:06:00.240 --> 00:06:02.913
+Ready to keep building
+from here? Let's go.

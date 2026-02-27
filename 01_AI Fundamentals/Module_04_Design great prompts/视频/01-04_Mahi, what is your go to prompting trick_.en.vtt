@@ -1,0 +1,72 @@
+WEBVTT
+
+1
+00:00:03.270 --> 00:00:06.630
+- I've found that not only
+giving a bunch of context
+
+2
+00:00:06.630 --> 00:00:07.860
+at the beginning is really helpful,
+
+3
+00:00:07.860 --> 00:00:10.477
+but I always like to add, at the end,
+
+4
+00:00:10.477 --> 00:00:13.110
+"Please ask me any follow-up
+or clarifying questions
+
+5
+00:00:13.110 --> 00:00:15.420
+before you continue doing work."
+
+6
+00:00:15.420 --> 00:00:16.830
+And that has been really helpful,
+
+7
+00:00:16.830 --> 00:00:20.670
+because when it's coming
+up with an end-to-end plan
+
+8
+00:00:20.670 --> 00:00:22.270
+for whatever task I've given it,
+
+9
+00:00:23.490 --> 00:00:24.577
+if it pauses and says,
+
+10
+00:00:24.577 --> 00:00:27.300
+"Okay, well, actually what
+about this task do I not know
+
+11
+00:00:27.300 --> 00:00:29.670
+and I need to ask me, the user?"
+
+12
+00:00:29.670 --> 00:00:31.860
+I can then answer those proactively
+
+13
+00:00:31.860 --> 00:00:34.290
+and make sure the output is
+something that I'm happy with,
+
+14
+00:00:34.290 --> 00:00:37.230
+rather than, you know,
+Gemini does a bunch of work,
+
+15
+00:00:37.230 --> 00:00:39.930
+and then I review it, and then
+I'm not super happy with it,
+
+16
+00:00:39.930 --> 00:00:41.280
+and we have keep iterating.

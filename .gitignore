@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.swp
+*~
+*.mp4
