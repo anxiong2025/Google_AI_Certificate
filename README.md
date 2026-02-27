@@ -1,7 +1,10 @@
 # Google AI 专业证书
 
-提供方: Google Career Certificates (Coursera)  
-下载时间: 2026-02-27 15:26
+提供方: Google Career Certificates (Coursera)
+
+**官方报名渠道**：
+- Grow with Google 官网介绍：https://grow.google/ai-professional/
+- Coursera 课程直达：https://www.coursera.org/professional-certificates/google-ai
 
 ## 课程总览
 

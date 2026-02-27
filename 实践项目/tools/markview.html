@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MarkView — Markdown 实时预览</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #0d1117;
+  --bg-editor: #161b22;
+  --bg-preview: #f6f1eb;
+  --bg-toolbar: #1c2128;
+  --border: #30363d;
+  --text-editor: #e6edf3;
+  --text-preview: #24292f;
+  --accent: #f0883e;
+  --accent-glow: rgba(240, 136, 62, 0.15);
+  --accent-2: #58a6ff;
+  --accent-3: #7ee787;
+  --syntax-heading: #ffa657;
+  --syntax-bold: #e6edf3;
+  --syntax-italic: #d2a8ff;
+  --syntax-code: #79c0ff;
+  --syntax-link: #58a6ff;
+  --syntax-list: #7ee787;
+  --syntax-hr: #484f58;
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.35);
+  --radius: 12px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-deep);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ===== APP LAYOUT ===== */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--bg-toolbar);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #f7c873);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0d1117;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(240, 136, 62, 0.3);
+}
+
+.header-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-editor);
+  letter-spacing: -0.3px;
+}
+
+.header-subtitle {
+  font-size: 11px;
+  color: #8b949e;
+  margin-top: 1px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: #c9d1d9;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: #484f58;
+  color: #e6edf3;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #0d1117;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.btn-accent:hover {
+  background: #f7a05c;
+  border-color: #f7a05c;
+  box-shadow: 0 2px 12px rgba(240, 136, 62, 0.3);
+}
+
+.btn svg { width: 14px; height: 14px; }
+
+.divider-v {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ===== EDITOR PANEL ===== */
+.editor-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-editor);
+  min-width: 0;
+  position: relative;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.panel-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel-label .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.word-count {
+  font-size: 11px;
+  color: #484f58;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#editor {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 20px 24px;
+  background: transparent;
+  color: var(--text-editor);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  tab-size: 2;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d transparent;
+}
+
+#editor::placeholder {
+  color: #484f58;
+}
+
+#editor::-webkit-scrollbar { width: 6px; }
+#editor::-webkit-scrollbar-track { background: transparent; }
+#editor::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+#editor::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* ===== RESIZE HANDLE ===== */
+.resize-handle {
+  width: 5px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background var(--transition);
+  position: relative;
+}
+
+.resize-handle:hover,
+.resize-handle.active {
+  background: var(--accent);
+}
+
+.resize-handle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 32px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.1);
+}
+
+.resize-handle:hover::after {
+  background: rgba(255,255,255,0.3);
+}
+
+/* ===== PREVIEW PANEL ===== */
+.preview-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-preview);
+  min-width: 0;
+  position: relative;
+}
+
+.preview-panel .panel-header {
+  background: rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.preview-panel .panel-label {
+  color: #656d76;
+}
+
+.preview-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 40px;
+  scrollbar-width: thin;
+  scrollbar-color: #d0d7de transparent;
+}
+
+.preview-body::-webkit-scrollbar { width: 6px; }
+.preview-body::-webkit-scrollbar-track { background: transparent; }
+.preview-body::-webkit-scrollbar-thumb { background: #d0d7de; border-radius: 3px; }
+
+/* ===== MARKDOWN RENDERED STYLES ===== */
+.markdown-body {
+  color: var(--text-preview);
+  font-family: 'Noto Serif SC', 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 720px;
+  animation: contentIn 0.3s ease;
+}
+
+@keyframes contentIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3,
+.markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a2e;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.markdown-body h3 { font-size: 1.25em; }
+.markdown-body h4 { font-size: 1.1em; }
+
+.markdown-body p {
+  margin-bottom: 1em;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.markdown-body em {
+  font-style: italic;
+  color: #57606a;
+}
+
+.markdown-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240, 136, 62, 0.3);
+  transition: all var(--transition);
+}
+
+.markdown-body a:hover {
+  color: #d4772f;
+  border-bottom-color: var(--accent);
+}
+
+.markdown-body code {
+  background: rgba(175, 184, 193, 0.2);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  color: #953800;
+}
+
+.markdown-body pre {
+  background: #1c2128;
+  color: #e6edf3;
+  padding: 16px 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1.2em 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.markdown-body pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: rgba(240, 136, 62, 0.05);
+  border-radius: 0 8px 8px 0;
+  color: #57606a;
+  font-style: italic;
+}
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 1.8em;
+  margin-bottom: 1em;
+}
+
+.markdown-body li {
+  margin-bottom: 0.4em;
+}
+
+.markdown-body li::marker {
+  color: var(--accent);
+}
+
+.markdown-body hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin: 2em 0;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 0.92em;
+}
+
+.markdown-body table th {
+  background: #f0e6d9;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.markdown-body table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e8e0d5;
+}
+
+.markdown-body table tr:hover td {
+  background: rgba(240, 136, 62, 0.04);
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1em 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.markdown-body input[type="checkbox"] {
+  margin-right: 6px;
+  accent-color: var(--accent);
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #8b949e;
+  text-align: center;
+  gap: 12px;
+}
+
+.empty-state .icon {
+  font-size: 48px;
+  opacity: 0.3;
+}
+
+.empty-state p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--bg-toolbar);
+  color: var(--text-editor);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  z-index: 999;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== TOOLBAR ===== */
+.editor-toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+  background: rgba(0,0,0,0.15);
+}
+
+.tb-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #8b949e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tb-btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: #e6edf3;
+}
+
+.tb-btn svg { width: 14px; height: 14px; }
+
+.tb-sep {
+  width: 1px;
+  background: var(--border);
+  margin: 2px 6px;
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main { flex-direction: column; }
+  .resize-handle { width: 100%; height: 5px; cursor: row-resize; }
+  .resize-handle::after { width: 32px; height: 3px; }
+  .preview-body { padding: 20px; }
+  .header-subtitle { display: none; }
+  .btn span.desktop-only { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">M</div>
+      <div>
+        <div class="header-title">MarkView</div>
+        <div class="header-subtitle">Markdown 实时预览工具</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn" onclick="loadSample()" title="加载示例">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 1.75V13.5h13.25a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"/></svg>
+        <span class="desktop-only">示例</span>
+      </button>
+      <button class="btn" onclick="clearEditor()" title="清空">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"/></svg>
+        <span class="desktop-only">清空</span>
+      </button>
+      <div class="divider-v"></div>
+      <button class="btn" onclick="copyMarkdown()" title="复制 Markdown">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+        <span class="desktop-only">复制</span>
+      </button>
+      <button class="btn" onclick="copyHTML()" title="复制 HTML">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+        <span class="desktop-only">HTML</span>
+      </button>
+      <button class="btn btn-accent" onclick="downloadHTML()" title="导出 HTML 文件">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14ZM7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
+        <span class="desktop-only">导出</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- EDITOR -->
+    <div class="editor-panel" id="editorPanel">
+      <div class="panel-header">
+        <span class="panel-label"><span class="dot"></span> 编辑器</span>
+        <span class="word-count" id="wordCount">0 字</span>
+      </div>
+      <div class="editor-toolbar">
+        <button class="tb-btn" onclick="insertFormat('**', '**')" title="加粗"><b>B</b></button>
+        <button class="tb-btn" onclick="insertFormat('*', '*')" title="斜体"><i>I</i></button>
+        <button class="tb-btn" onclick="insertFormat('`', '`')" title="行内代码">&lt;/&gt;</button>
+        <button class="tb-btn" onclick="insertFormat('~~', '~~')" title="删除线"><s>S</s></button>
+        <div class="tb-sep"></div>
+        <button class="tb-btn" onclick="insertLine('# ')" title="H1">H1</button>
+        <button class="tb-btn" onclick="insertLine('## ')" title="H2">H2</button>
+        <button class="tb-btn" onclick="insertLine('### ')" title="H3">H3</button>
+        <div class="tb-sep"></div>
+        <button class="tb-btn" onclick="insertLine('- ')" title="列表">• 列表</button>
+        <button class="tb-btn" onclick="insertLine('1. ')" title="有序列表">1. 有序</button>
+        <button class="tb-btn" onclick="insertLine('- [ ] ')" title="任务">☑ 任务</button>
+        <div class="tb-sep"></div>
+        <button class="tb-btn" onclick="insertLine('> ')" title="引用">❝ 引用</button>
+        <button class="tb-btn" onclick="insertBlock('```\n', '\n```')" title="代码块">{ } 代码</button>
+        <button class="tb-btn" onclick="insertLine('---')" title="分割线">— 分割</button>
+        <button class="tb-btn" onclick="insertFormat('[', '](url)')" title="链接">🔗 链接</button>
+        <button class="tb-btn" onclick="insertTable()" title="表格">▦ 表格</button>
+      </div>
+      <textarea id="editor" placeholder="在这里输入 Markdown...&#10;&#10;支持标题、列表、代码块、表格、引用等语法。&#10;右侧将实时显示预览效果。" spellcheck="false"></textarea>
+    </div>
+
+    <!-- RESIZE HANDLE -->
+    <div class="resize-handle" id="resizeHandle"></div>
+
+    <!-- PREVIEW -->
+    <div class="preview-panel" id="previewPanel">
+      <div class="panel-header">
+        <span class="panel-label">预览</span>
+      </div>
+      <div class="preview-body" id="previewBody">
+        <div class="empty-state" id="emptyState">
+          <div class="icon">📝</div>
+          <p>在左侧编辑器输入 Markdown<br>这里会实时显示预览</p>
+        </div>
+        <div class="markdown-body" id="preview" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== MARKDOWN PARSER =====
+// Lightweight Markdown → HTML (no external dependencies)
+function parseMarkdown(md) {
+  let html = md;
+
+  // Escape HTML
+  html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Code blocks (fenced)
+  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+    return `<pre><code class="lang-${lang}">${code.trim()}</code></pre>`;
+  });
+
+  // Inline code (protect from other transformations)
+  const inlineCodePlaceholders = [];
+  html = html.replace(/`([^`\n]+)`/g, (_, code) => {
+    const idx = inlineCodePlaceholders.length;
+    inlineCodePlaceholders.push(`<code>${code}</code>`);
+    return `%%ICODE${idx}%%`;
+  });
+
+  // Tables
+  html = html.replace(/^(\|.+\|)\n(\|[\s:|-]+\|)\n((?:\|.+\|\n?)*)/gm, (_, header, sep, body) => {
+    const ths = header.split('|').slice(1, -1).map(h => `<th>${h.trim()}</th>`).join('');
+    const rows = body.trim().split('\n').map(row => {
+      const tds = row.split('|').slice(1, -1).map(d => `<td>${d.trim()}</td>`).join('');
+      return `<tr>${tds}</tr>`;
+    }).join('');
+    return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
+  });
+
+  // Headings
+  html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>');
+  html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>');
+  html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
+
+  // HR
+  html = html.replace(/^---+$/gm, '<hr>');
+
+  // Blockquote
+  html = html.replace(/^&gt;\s+(.+)$/gm, '<blockquote>$1</blockquote>');
+  // Merge consecutive blockquotes
+  html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n');
+
+  // Task list
+  html = html.replace(/^-\s+\[x\]\s+(.+)$/gm, '<li class="task"><input type="checkbox" checked disabled> $1</li>');
+  html = html.replace(/^-\s+\[\s?\]\s+(.+)$/gm, '<li class="task"><input type="checkbox" disabled> $1</li>');
+
+  // Unordered list
+  html = html.replace(/^[-*]\s+(.+)$/gm, '<li>$1</li>');
+
+  // Ordered list
+  html = html.replace(/^\d+\.\s+(.+)$/gm, '<li>$1</li>');
+
+  // Wrap consecutive <li> in <ul>
+  html = html.replace(/((?:<li(?:\s[^>]*)?>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+
+  // Images
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+
+  // Links
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  // Bold + Italic
+  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  html = html.replace(/~~(.+?)~~/g, '<del>$1</del>');
+
+  // Restore inline code
+  inlineCodePlaceholders.forEach((code, i) => {
+    html = html.replace(`%%ICODE${i}%%`, code);
+  });
+
+  // Paragraphs — wrap remaining text lines
+  html = html.split('\n\n').map(block => {
+    block = block.trim();
+    if (!block) return '';
+    if (/^<(h[1-6]|ul|ol|li|table|thead|tbody|tr|td|th|pre|blockquote|hr|img|div)[\s>]/i.test(block)) return block;
+    // Don't wrap blocks that are already HTML
+    if (block.startsWith('<')) return block;
+    return `<p>${block.replace(/\n/g, '<br>')}</p>`;
+  }).join('\n');
+
+  return html;
+}
+
+// ===== APP LOGIC =====
+const editor = document.getElementById('editor');
+const preview = document.getElementById('preview');
+const previewBody = document.getElementById('previewBody');
+const emptyState = document.getElementById('emptyState');
+const wordCount = document.getElementById('wordCount');
+
+function updatePreview() {
+  const text = editor.value;
+  if (!text.trim()) {
+    preview.style.display = 'none';
+    emptyState.style.display = 'flex';
+    wordCount.textContent = '0 字';
+    return;
+  }
+  emptyState.style.display = 'none';
+  preview.style.display = 'block';
+  preview.innerHTML = parseMarkdown(text);
+  // Word count (Chinese + English)
+  const cn = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+  const en = (text.match(/[a-zA-Z]+/g) || []).length;
+  wordCount.textContent = `${cn + en} 字 · ${text.length} 字符`;
+  // Save
+  localStorage.setItem('markview-content', text);
+}
+
+editor.addEventListener('input', updatePreview);
+
+// Tab support
+editor.addEventListener('keydown', e => {
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const start = editor.selectionStart;
+    const end = editor.selectionEnd;
+    editor.value = editor.value.substring(0, start) + '  ' + editor.value.substring(end);
+    editor.selectionStart = editor.selectionEnd = start + 2;
+    updatePreview();
+  }
+});
+
+// ===== TOOLBAR ACTIONS =====
+function insertFormat(prefix, suffix) {
+  const start = editor.selectionStart;
+  const end = editor.selectionEnd;
+  const selected = editor.value.substring(start, end) || '文本';
+  editor.value = editor.value.substring(0, start) + prefix + selected + suffix + editor.value.substring(end);
+  editor.selectionStart = start + prefix.length;
+  editor.selectionEnd = start + prefix.length + selected.length;
+  editor.focus();
+  updatePreview();
+}
+
+function insertLine(prefix) {
+  const start = editor.selectionStart;
+  // Find line start
+  const before = editor.value.substring(0, start);
+  const lineStart = before.lastIndexOf('\n') + 1;
+  const needNewline = lineStart < start && editor.value[lineStart] !== '\n' ? '\n' : '';
+  editor.value = editor.value.substring(0, start) + (start === lineStart ? '' : '\n') + prefix + editor.value.substring(start);
+  const newPos = start + (start === lineStart ? 0 : 1) + prefix.length;
+  editor.selectionStart = editor.selectionEnd = newPos;
+  editor.focus();
+  updatePreview();
+}
+
+function insertBlock(prefix, suffix) {
+  const start = editor.selectionStart;
+  const end = editor.selectionEnd;
+  const selected = editor.value.substring(start, end) || '代码';
+  const insert = '\n' + prefix + selected + suffix + '\n';
+  editor.value = editor.value.substring(0, start) + insert + editor.value.substring(end);
+  editor.selectionStart = start + prefix.length + 1;
+  editor.selectionEnd = start + prefix.length + 1 + selected.length;
+  editor.focus();
+  updatePreview();
+}
+
+function insertTable() {
+  const tpl = '\n| 列1 | 列2 | 列3 |\n| --- | --- | --- |\n| 内容 | 内容 | 内容 |\n';
+  const start = editor.selectionStart;
+  editor.value = editor.value.substring(0, start) + tpl + editor.value.substring(start);
+  editor.selectionStart = editor.selectionEnd = start + tpl.length;
+  editor.focus();
+  updatePreview();
+}
+
+// ===== HEADER ACTIONS =====
+function copyMarkdown() {
+  navigator.clipboard.writeText(editor.value).then(() => showToast('✅ Markdown 已复制'));
+}
+
+function copyHTML() {
+  navigator.clipboard.writeText(preview.innerHTML).then(() => showToast('✅ HTML 已复制'));
+}
+
+function downloadHTML() {
+  const content = `<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Markdown Export</title>
+<style>body{max-width:800px;margin:40px auto;padding:0 20px;font-family:Georgia,'Noto Serif SC',serif;line-height:1.8;color:#24292f;}
+h1,h2,h3{font-family:system-ui,sans-serif;}h1{border-bottom:3px solid #f0883e;display:inline-block;}
+h2{border-bottom:1px solid #d8dee4;padding-bottom:0.2em;}
+code{background:rgba(175,184,193,0.2);padding:0.15em 0.4em;border-radius:4px;font-size:0.88em;}
+pre{background:#1c2128;color:#e6edf3;padding:16px 20px;border-radius:10px;overflow-x:auto;}
+pre code{background:none;color:inherit;padding:0;}
+blockquote{border-left:4px solid #f0883e;padding:0.5em 1em;margin:1em 0;background:rgba(240,136,62,0.05);color:#57606a;font-style:italic;border-radius:0 8px 8px 0;}
+table{border-collapse:collapse;width:100%;margin:1em 0;}th{background:#f0e6d9;font-weight:600;text-align:left;padding:10px 14px;border-bottom:2px solid #f0883e;}
+td{padding:10px 14px;border-bottom:1px solid #e8e0d5;}
+a{color:#f0883e;text-decoration:none;}hr{border:none;height:2px;background:linear-gradient(90deg,#f0883e,transparent);margin:2em 0;}
+img{max-width:100%;border-radius:8px;}</style></head>
+<body>${preview.innerHTML}</body></html>`;
+  const blob = new Blob([content], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'markdown-export.html';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('📄 HTML 文件已导出');
+}
+
+function clearEditor() {
+  if (editor.value && !confirm('确认清空编辑器内容？')) return;
+  editor.value = '';
+  updatePreview();
+  localStorage.removeItem('markview-content');
+  editor.focus();
+}
+
+function loadSample() {
+  editor.value = `# MarkView — Markdown 实时预览
+
+> 一个轻量、美观的 Markdown 编辑器，纯前端实现，无需安装。
+
+## ✨ 功能特色
+
+- **实时预览** — 输入即渲染，所见即所得
+- **工具栏** — 快速插入标题、列表、代码块等
+- **导出 HTML** — 一键导出带样式的 HTML 文件
+- **本地存储** — 自动保存，刷新不丢失
+- **响应式** — 手机也能用
+
+## 📊 语法演示
+
+### 表格
+
+| 功能 | 支持 | 备注 |
+| --- | --- | --- |
+| 标题 | ✅ | H1-H6 |
+| 列表 | ✅ | 有序/无序/任务 |
+| 代码块 | ✅ | 带语言标注 |
+| 表格 | ✅ | 对齐支持 |
+| 引用 | ✅ | 嵌套支持 |
+
+### 代码块
+
+\`\`\`javascript
+function hello() {
+  console.log("Hello, Markdown! 🎉");
+  return { status: "awesome" };
+}
+\`\`\`
+
+### 任务列表
+
+- [x] 完成 Markdown 解析器
+- [x] 添加实时预览
+- [x] 工具栏快捷插入
+- [ ] 添加主题切换
+- [ ] 支持 Mermaid 图表
+
+### 引用
+
+> 工具的价值不在于它有多复杂，
+> 而在于它能帮你节省多少时间。
+
+---
+
+*用 ❤️ 和 AI 构建*`;
+  updatePreview();
+  editor.focus();
+  showToast('📝 已加载示例内容');
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// ===== RESIZE =====
+const handle = document.getElementById('resizeHandle');
+const editorPanel = document.getElementById('editorPanel');
+const previewPanel = document.getElementById('previewPanel');
+let isResizing = false;
+
+handle.addEventListener('mousedown', e => {
+  isResizing = true;
+  handle.classList.add('active');
+  document.body.style.cursor = 'col-resize';
+  document.body.style.userSelect = 'none';
+  e.preventDefault();
+});
+
+document.addEventListener('mousemove', e => {
+  if (!isResizing) return;
+  const container = document.querySelector('.main');
+  const rect = container.getBoundingClientRect();
+  const pct = ((e.clientX - rect.left) / rect.width) * 100;
+  if (pct > 20 && pct < 80) {
+    editorPanel.style.flex = `0 0 ${pct}%`;
+    previewPanel.style.flex = `0 0 ${100 - pct}%`;
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  if (isResizing) {
+    isResizing = false;
+    handle.classList.remove('active');
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+  }
+});
+
+// ===== INIT =====
+const saved = localStorage.getItem('markview-content');
+if (saved) {
+  editor.value = saved;
+  updatePreview();
+}
+</script>
+</body>
+</html>
